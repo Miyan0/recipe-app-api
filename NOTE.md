@@ -1,6 +1,6 @@
 # DOCKER SETUP
 
-## Setup the Python enviromemnt image
+## Setup the Python environment image
 
 Create a Dockerfile
 Create the requirements.txt file
@@ -44,3 +44,18 @@ for example, to create a Django project, you run:
 ``` bash
  docker-compose run app sh -c "django-admin.py startproject app ."
 ```
+
+## Running the project
+
+``` bash
+ docker-compose up"
+```
+
+Note that to load the site in the browser you must go to `127.0.0.1:8000` instead of `0.0.0.0:8000`
+
+## Run tests and linter
+
+``` bash
+ docker-compose run app sh -c "python manage.py test && flake8"
+```
+
